@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Lezione HTML</title>
+	<style>
+		label {
+			display: block
+		}
+		ul {
+			list-style-type: none;
+		}
+	</style>
+</head>
+
+<body>
+	<form action="#" method="get">
+		<header>
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" placeholder="example@example.com" autocomplete="on" required>
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" pattern="(?=.*/d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Inserire almeno una lettera maiuscola,una minuscola e un numero" placeholder="******" required>
+			<label for="name">Nome</label>
+			<input type="text" name="name" id="name" minlength="2" placeholder="Mario" required>
+			<label for="lastname">Cognome</label>
+			<input type="text" name="lastname" id="lastname" placeholder="Rossi" minlength="2" required>
+			<label for="dateofbirth">Data di Nascita</label>
+			<input type="date" name="dateofbirth" id="dateofbirth" required>
+			<label for="phone">Telefono</label>
+			<input type="tel" name="phone" id="phone" maxlength="10" placeholder="3213213213" required>
+		</header>
+		<section>
+			<fieldset>
+				<legend>Piano di Abbonamento</legend>
+				<ul>
+					<li>
+						<label for="free">Free</label>
+						<input type="radio" name="plain" id="free" checked value="free">
+					</li>
+					<li>
+						<label for="plain1">4,99€</label>
+						<input type="radio" name="plain" id="plain1" value="plain1">
+					</li>
+					<li>
+						<label for="plain2">9,99€</label>
+						<input type="radio" name="plain" id="plain2" value="plain2">
+					</li>
+					<li>
+						<label for="plain3">14,99€</label>
+						<input type="radio" name="plain" id="plain3" value="plain3">
+					</li>
+				</ul>
+			</fieldset>
+			<label for="advantage">Vantaggi Pro</label>
+			<select name="advantage" id="advantage">
+				<option value="si">Si +1,99€</option>
+				<option value="no">No</option>
+			</select>
+		</section>
+		<section>
+			<fieldset>
+				<legend>Dati Carta di Credito</legend>
+				<label for="nmbcard">Numero Carta di Credito</label>
+				<input type="text" name="nmbcard" id="nmbcard" minlength="13" maxlength="16" pattern="[0-9]{13,16}" required>
+				<label for="cvc">CVC</label>
+				<input type="text" name="cvc" id="cvc" minlength="3" maxlength="3" pattern="[0-9]{3}" size="3" required>
+				<label for="expire-d">Scadenza</label>
+				<input type="month" name="expire-date" id="expire-d" min="2022-03" max="2032-12" pattern="[0-9]{4}-[0-9]{2}" placeholder="2022-03"  required>
+			</fieldset>
+		</section>
+	</form>
+</body>
+
+</html>
