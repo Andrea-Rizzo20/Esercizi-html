@@ -19,6 +19,8 @@
 <body>
 	<form action="#" method="get">
 		<header>
+			<fieldset>
+				<legend>Anagrafica</legend>
 			<label for="email">Email</label>
 			<input type="email" name="email" id="email" placeholder="example@example.com" autocomplete="on" required>
 			<label for="password">Password</label>
@@ -31,6 +33,7 @@
 			<input type="date" name="dateofbirth" id="dateofbirth" required>
 			<label for="phone">Telefono</label>
 			<input type="tel" name="phone" id="phone" maxlength="10" placeholder="3213213213" required>
+			</fieldset>
 		</header>
 		<section>
 			<fieldset>
@@ -71,6 +74,17 @@
 				<input type="month" name="expire-date" id="expire-d" min="2022-03" max="2032-12" pattern="[0-9]{4}-[0-9]{2}" placeholder="2022-03"  required>
 			</fieldset>
 		</section>
+		<footer>
+			<fieldset>
+				<legend>Indirizzo di Fatturazione</legend>
+			<label for="address">Indirizzo</label>
+			<input type="text" name="address" id="address" required>
+			<label for="zipcode">Cap</label>
+			<input type="text" name="zipcode" id="zipcode" pattern="[0-9]{5}" required>
+			<label for="country">Citta</label>
+			<input type="text" name="country" id="country" pattern="[a-z]{2,}" required>
+			</fieldset>
+		</footer>
 	</form>
 </body>
 
